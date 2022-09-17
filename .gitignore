@@ -14,6 +14,10 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+# Android Studio
+*.iml
+.idea
+
 # Package Files #
 *.jar
 *.war
