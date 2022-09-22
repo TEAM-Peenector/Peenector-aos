@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_main_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+      <TextView
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:text="Peenector"
+          android:layout_margin="20dp"
+          android:gravity="center"
+          android:textSize="30dp"
+          android:textStyle="bold"/>
+      <Button
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:id="@+id/btn_main_mypage"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+          />
+   </LinearLayout>
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="랜덤매칭된 친구들"
+       android:textSize="30dp"
+       android:textStyle="bold" />
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="어떤 친구들과 매칭되었는지 살펴볼까요?"
+       android:textSize="15dp"/>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:padding="20dp"
+       android:id="@+id/my_recycler_view">
+
+   </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
