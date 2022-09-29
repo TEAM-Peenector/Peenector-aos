@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">peenector</string>
+    <string name="title">랜덤매칭된 친구들</string>
+    <string name="description">어떤 친구들과 매칭되었는지 살펴볼까요?</string>
+    <string name="major">컴퓨터 공학과</string>
+    <string name="name">홍길동</string>
 </resources>
