@@ -1,11 +1,10 @@
-package com.example.peenector
+package com.example.peenector.presentation.main
 
-import android.content.ContentValues.TAG
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.peenector.R
 
 class MainRecyclerAdapter : RecyclerView.Adapter<MainViewHolder>(){
 

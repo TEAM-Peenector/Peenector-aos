@@ -1,4 +1,4 @@
-package com.example.peenector
+package com.example.peenector.presentation.main
 
 import android.util.Log
 

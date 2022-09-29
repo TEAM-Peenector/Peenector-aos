@@ -1,8 +1,7 @@
-package com.example.peenector
+package com.example.peenector.presentation.main
 
 import android.util.Log
 import  android.view.View
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.layout_recycler_item.view.*
 

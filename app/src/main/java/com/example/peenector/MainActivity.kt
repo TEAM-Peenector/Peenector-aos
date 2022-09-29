@@ -5,6 +5,8 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.peenector.databinding.ActivityMainBinding
+import com.example.peenector.presentation.main.MainModel
+import com.example.peenector.presentation.main.MainRecyclerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
