@@ -1,4 +1,4 @@
-package com.example.peenector
+package com.example.peenector.presentation.login
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
