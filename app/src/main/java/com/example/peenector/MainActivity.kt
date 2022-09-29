@@ -3,6 +3,7 @@ package com.example.peenector
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.peenector.databinding.ActivityMainBinding
 import com.example.peenector.presentation.main.MainModel
@@ -28,8 +29,8 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG,"MainActivity - onCreate() called")
 
         //10번 반복한다.
-        for(i in 1..10){
-            var mainModel = MainModel(name = "홍길동 $i",major ="컴퓨터공학과과")
+        for(i in 1..8){
+            var mainModel = MainModel(name = "홍길동 $i",major ="컴퓨터공학과")
             this.modelList.add(mainModel)
        }
         Log.d(TAG,"MainActivity - 반복문 돌린 후 this.modelList.size : $(this.modelList.size)")
@@ -41,8 +42,8 @@ class MainActivity : AppCompatActivity() {
 
         //리사이클러뷰 설정
         my_recycler_view.apply{
-            //
-            layoutManager = LinearLayoutManager(this@MainActivity,LinearLayoutManager.VERTICAL,false)
+            val gridLayoutManager = GridLayoutManager(this@MainActivity,2)
+            layoutManager = gridLayoutManager
 
             //어답터 장착
             adapter = mainRecyclerAdapter

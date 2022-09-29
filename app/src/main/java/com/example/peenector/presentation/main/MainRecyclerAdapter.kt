@@ -13,7 +13,7 @@ class MainRecyclerAdapter : RecyclerView.Adapter<MainViewHolder>(){
 
     //목록 item 수
     override fun getItemCount(): Int {
-        return 10
+        return 8
     }
 
     //뷰홀더가 생성 되었을 때
