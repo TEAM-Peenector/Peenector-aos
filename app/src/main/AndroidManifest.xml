@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Peenector"
         tools:targetApi="31">
         <activity
+            android:name=".signUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.login.SigninActivity"
             android:exported="true">
             <intent-filter>
