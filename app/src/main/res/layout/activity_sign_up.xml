@@ -35,7 +35,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="23dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/signup_rectangle_radius_5"
         android:hint="@string/classOf"
+        android:paddingVertical="10dp"
+        android:paddingStart="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_tv_signup_info" />
@@ -45,7 +49,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="23dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/signup_rectangle_radius_5"
         android:hint="@string/signup_name"
+        android:paddingVertical="10dp"
+        android:paddingStart="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_edt_classof" />
@@ -55,7 +63,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="23dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/signup_rectangle_radius_5"
         android:hint="@string/signup_password"
+        android:paddingVertical="10dp"
+        android:paddingStart="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_edt_name" />
@@ -65,7 +77,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="23dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/signup_rectangle_radius_5"
         android:hint="@string/signup_phonenum"
+        android:paddingVertical="10dp"
+        android:paddingStart="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_edt_password" />
@@ -75,9 +91,39 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="23dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/signup_rectangle_radius_5"
         android:hint="@string/signup_email"
+        android:paddingVertical="10dp"
+        android:paddingStart="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_edt_phonenum" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signup_btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/signup_rectangle_radius_5"
+        android:backgroundTint="@color/main_color"
+        android:text="@string/signup"
+        android:theme="@style/R24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signup_edt_email" />
+
+    <TextView
+        android:id="@+id/tv_go_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/goto_home"
+        android:textColor="@color/grey_7E7474"
+        android:theme="@style/R16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signup_btn_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
