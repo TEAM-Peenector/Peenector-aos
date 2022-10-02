@@ -45,7 +45,8 @@
             android:id="@+id/tv_mypage_card_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:padding ="10dp"
+            android:layout_marginTop="5dp"
             android:paddingBottom="10dp"
             android:text="@string/mypage_card_title"
             android:theme="@style/B14"
@@ -74,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:paddingLeft="10dp"
+            android:padding ="10dp"
             android:text="이름: "
             app:layout_constraintTop_toBottomOf="@id/v_mypage_line"
             app:layout_constraintLeft_toRightOf="@id/ic_mypage_person" />
@@ -83,6 +84,7 @@
             android:id="@+id/tv_mypage_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding ="10dp"
             android:text="학번: "
             app:layout_constraintLeft_toRightOf="@id/ic_mypage_person"
             app:layout_constraintTop_toBottomOf="@id/tv_mypage_name"
@@ -92,6 +94,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="휴대폰: "
+            android:padding ="10dp"
+
             app:layout_constraintLeft_toRightOf="@id/ic_mypage_person"
             app:layout_constraintTop_toBottomOf="@id/tv_mypage_id"/>
 
