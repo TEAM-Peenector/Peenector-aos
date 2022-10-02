@@ -108,4 +108,10 @@
         <item name="android:textSize">12dp</item>
         <item name="android:textColor">@color/black</item>
     </style>
+
+    <style name="R17">
+        <item name="fontFamily">@font/pretendard_regular</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>
