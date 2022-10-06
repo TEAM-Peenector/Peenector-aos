@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.d(TAG,"MainActivity - onCreate() called")
 
-        //10번 반복한다.
+        //8번 반복한다.
         for(i in 1..8){
             var mainModel = MainModel(name = "홍길동 $i",major ="컴퓨터공학과")
             this.modelList.add(mainModel)
