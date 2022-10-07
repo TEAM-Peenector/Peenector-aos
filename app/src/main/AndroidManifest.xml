@@ -28,6 +28,9 @@
         <activity
             android:name=".presentation.mypage.MypageActivity"
             android:exported="true" />
+        <activity
+            android:name=".presentation.mission.MissionActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

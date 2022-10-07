@@ -18,4 +18,14 @@
 
     <!--타인상세조회뷰-->
     <string name="other_title">김철수님의 페이지</string>
+
+
+    <!--미션뷰-->
+    <string name="mission_title">MISSION!</string>
+    <string name="mission_subtitle">항동 철길에서 단체 사진을 찍어라!</string>
+    <string name="mission_location">* 위치 : 서울특별시 구로구 오류2동 223-10</string>
+    <string name="mission_explanation_title">* 미션 방법</string>
+    <string name="mission_explanation1">1. 철길을 찾아 도착한다.</string>
+    <string name="mission_explanation2">2. 모두가 철로 안쪽으로 들어간 채로 사진을 찍는다.</string>
+    <string name="mission_explanation3">3. 찍은 사진을 010-0000-0000으로 보내고 기프티콘을 받는다!</string>
 </resources>

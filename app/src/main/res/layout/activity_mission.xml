@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_main_app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:theme="@style/B28"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_main_mypage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_main_mypage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mission_title"
+        android:textAlignment="center"
+        android:theme="@style/B24"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mission_subtitle"
+        android:textAlignment="center"
+        android:theme="@style/R15"
+        android:padding="10dp"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/main_rectangle_radius_8"
+        android:backgroundTint="@color/main_color">
+
+        <TextView
+            android:id="@+id/tv_mission_location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/mission_location"
+            android:theme="@style/R15"
+            android:padding="10dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_rectangle_radius_8"
+        android:backgroundTint="@color/main_color"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/tv_mission_explanation_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/R15"
+            android:text="@string/mission_explanation_title"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:id="@+id/iv_mission_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mission_pic"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_mission_explanation_title"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/tv_mission_explanation1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/R15"
+            android:text="@string/mission_explanation1"
+            app:layout_constraintTop_toBottomOf="@id/iv_mission_pic"/>
+        <TextView
+            android:id="@+id/tv_mission_explanation2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/R15"
+            android:text="@string/mission_explanation2"
+            app:layout_constraintTop_toBottomOf="@id/tv_mission_explanation1"/>
+        <TextView
+            android:id="@+id/tv_mission_explanation3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/R15"
+            android:text="@string/mission_explanation3"
+            app:layout_constraintTop_toBottomOf="@id/tv_mission_explanation2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
