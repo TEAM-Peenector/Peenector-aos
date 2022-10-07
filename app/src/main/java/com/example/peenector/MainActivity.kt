@@ -5,11 +5,10 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.peenector.databinding.ActivityMainBinding
 import com.example.peenector.presentation.main.MainModel
 import com.example.peenector.presentation.main.MainRecyclerAdapter
-import com.example.peenector.util.MypageActivity
+import com.example.peenector.presentation.mypage.MypageActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         //마이페이지버튼 클릭이벤트리스너
         btn_main_mypage.setOnClickListener{
-            var intent = Intent(this,MypageActivity::class.java)
+            var intent = Intent(this, MypageActivity::class.java)
             startActivity(intent)
         }
     }
