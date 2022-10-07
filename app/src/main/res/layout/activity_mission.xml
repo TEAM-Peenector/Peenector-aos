@@ -61,6 +61,14 @@
             android:text="@string/mission_location"
             android:theme="@style/R15"
             android:padding="10dp"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mission_location"
+            app:layout_constraintTop_toBottomOf="@id/tv_mission_location"
+            android:padding="10dp"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
