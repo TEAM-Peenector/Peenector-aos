@@ -67,6 +67,12 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="R15">
+        <item name="fontFamily">@font/pretendard_regular</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     <style name="M14">
         <item name="fontFamily">@font/pretendard_medium</item>
         <item name="android:textSize">14dp</item>
