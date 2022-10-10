@@ -38,18 +38,31 @@
         android:layout_marginTop="21dp"
         android:background="@drawable/signup_rectangle_radius_5"
         android:hint="@string/classOf"
+        android:inputType="number"
         android:paddingVertical="10dp"
         android:paddingStart="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_tv_signup_info" />
 
+    <TextView
+        android:id="@+id/tv_signup_warning_classof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/warning_classof"
+        android:textColor="@color/warning_red"
+        android:textSize="13sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/signup_edt_classof"
+        app:layout_constraintTop_toBottomOf="@id/signup_edt_classof" />
+
     <EditText
         android:id="@+id/signup_edt_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="23dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/signup_rectangle_radius_5"
         android:hint="@string/signup_name"
         android:paddingVertical="10dp"
@@ -58,28 +71,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_edt_classof" />
 
+    <TextView
+        android:id="@+id/tv_signup_warning_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/warning_input_name"
+        android:textColor="@color/warning_red"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@id/signup_edt_name"
+        app:layout_constraintTop_toBottomOf="@id/signup_edt_name" />
+
     <EditText
         android:id="@+id/signup_edt_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="23dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/signup_rectangle_radius_5"
         android:hint="@string/signup_password"
+        android:inputType="textPassword"
         android:paddingVertical="10dp"
         android:paddingStart="19dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_edt_name" />
 
+    <TextView
+        android:id="@+id/tv_signup_warning_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/warning_password"
+        android:visibility="invisible"
+        android:textColor="@color/warning_red"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@id/signup_edt_password"
+        app:layout_constraintTop_toBottomOf="@id/signup_edt_password" />
+
+
     <EditText
         android:id="@+id/signup_edt_phonenum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="23dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/signup_rectangle_radius_5"
         android:hint="@string/signup_phonenum"
+        android:inputType="number"
         android:paddingVertical="10dp"
         android:paddingStart="19dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +130,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="23dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/signup_rectangle_radius_5"
         android:hint="@string/signup_email"
         android:paddingVertical="10dp"

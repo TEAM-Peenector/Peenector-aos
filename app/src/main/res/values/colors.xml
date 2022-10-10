@@ -14,4 +14,7 @@
     <color name="pink_f0aac3">#f0AAC3</color>
     <color name="grey_7E7474">#7E7474</color>
     <color name="sub_main">#C7F8E7</color>
+
+    <!--signup-->
+    <color name="warning_red">#D1180B</color>
 </resources>
