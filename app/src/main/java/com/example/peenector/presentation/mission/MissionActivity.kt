@@ -3,6 +3,7 @@ package com.example.peenector.presentation.mission
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.peenector.MainActivity
 import com.example.peenector.R
 import com.example.peenector.presentation.mypage.MypageActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,6 +17,12 @@ class MissionActivity : AppCompatActivity() {
         //마이페이지버튼 클릭이벤트리스너
         btn_mission_mypage.setOnClickListener {
             var intent = Intent(this, MypageActivity::class.java)
+            startActivity(intent)
+        }
+
+        //엑스버튼 클릭이벤트리스너
+        ic_mission_x.setOnClickListener{
+            var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
