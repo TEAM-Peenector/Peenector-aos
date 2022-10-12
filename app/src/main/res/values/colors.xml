@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="main_color">#AAF0D8</color>
 
+
     <!--login-->
     <color name="purple_AAC3f0">#AAC3f0</color>
     <color name="pink_f0aac3">#f0AAC3</color>
@@ -17,4 +18,7 @@
 
     <!--signup-->
     <color name="warning_red">#D1180B</color>
+
+    <color name="gray">#6C6C6C</color>
+
 </resources>

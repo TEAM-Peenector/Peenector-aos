@@ -1,5 +1,7 @@
 <resources>
+    <!-- 메인뷰 -->
     <string name="app_name">peenector</string>
+
 
     <!--로그인 뷰-->
     <string name="pennector">Pennector</string>
@@ -23,4 +25,33 @@
     <string name="warning_input_name">실명을 입력해주세요.</string>
     <string name="warning_password">비밀번호는 최소 8글자 이상이여야 되고 영어로 입력해주세요</string>
     <string name="warging_input_everything">입력하지 않은 값이 있습니다.</string>
+
+    <string name="title">랜덤매칭된 친구들</string>
+    <string name="description">어떤 친구들과 매칭되었는지 살펴볼까요?</string>
+    <string name="major">컴퓨터 공학과</string>
+    <string name="name">홍길동</string>
+    <string name="mission">함께 할 미션 보러가기</string>
+
+    <!--마이페이지뷰-->
+    <string name="mypage_title">마이페이지</string>
+    <string name="mypage_card_title">팀 이름</string>
+    <string name="id">학번</string>
+    <string name="phone">휴대폰</string>
+    <string name="mypage_correct">프로필 수정하기</string>
+    <string name="notification">공지사항</string>
+    <string name="q_a">문의하기</string>
+
+    <!--타인상세조회뷰-->
+    <string name="other_title">김철수님의 페이지</string>
+
+
+    <!--미션뷰-->
+    <string name="mission_title">MISSION!</string>
+    <string name="mission_subtitle">항동 철길에서 단체 사진을 찍어라!</string>
+    <string name="mission_location">* 위치 : 서울특별시 구로구 오류2동 223-10</string>
+    <string name="mission_explanation_title">* 미션 방법</string>
+    <string name="mission_explanation1">1. 철길을 찾아 도착한다.</string>
+    <string name="mission_explanation2">2. 모두가 철로 안쪽으로 들어간 채로 사진을 찍는다.</string>
+    <string name="mission_explanation3">3. 찍은 사진을 010-0000-0000으로 보내고 기프티콘을 받는다!</string>
+
 </resources>
