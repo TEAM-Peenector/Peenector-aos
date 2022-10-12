@@ -14,8 +14,13 @@
         android:theme="@style/Theme.Peenector"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.mypage.OtherActivity"
-            android:exported="true" />
+
+            android:name=".presentation.login.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.login.SigninActivity"
+            android:exported="false"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
