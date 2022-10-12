@@ -1,13 +1,15 @@
 package com.example.peenector
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.peenector.databinding.ActivityMainBinding
 import com.example.peenector.presentation.main.MainModel
 import com.example.peenector.presentation.main.MainRecyclerAdapter
+import com.example.peenector.presentation.mission.MissionActivity
+import com.example.peenector.presentation.mypage.MypageActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mainRecyclerAdapter: MainRecyclerAdapter
 
-    //뷰가 화면에 그려질때때
+    //뷰가 화면에 그려질때
    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.d(TAG,"MainActivity - onCreate() called")
 
-        //10번 반복한다.
+        //8번 반복한다.
         for(i in 1..8){
             var mainModel = MainModel(name = "홍길동 $i",major ="컴퓨터공학과")
             this.modelList.add(mainModel)
@@ -47,6 +49,17 @@ class MainActivity : AppCompatActivity() {
 
             //어답터 장착
             adapter = mainRecyclerAdapter
+        }
+
+        //마이페이지버튼 클릭이벤트리스너
+        btn_main_mypage.setOnClickListener{
+            var intent = Intent(this, MypageActivity::class.java)
+            startActivity(intent)
+        }
+        //미션페이지버튼 클릭이벤트리스너
+        btn_main_missionpage.setOnClickListener{
+            var intent = Intent(this,MissionActivity::class.java)
+            startActivity(intent)
         }
     }
 }
