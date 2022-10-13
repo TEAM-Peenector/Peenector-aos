@@ -1,15 +1,18 @@
 package com.example.peenector.data
 
+import com.example.peenector.data.remote.api.LoginService
+import com.example.peenector.data.remote.api.SignUpService
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import java.io.IOException
 
 
 object PennerctorClient {
-    private const val BASE_URL = "http://43.201.97.88:8080/"
+    private const val BASE_URL = "http://43.201.97.88:8080/v1/"
 
     private val retrofit: Retrofit =
         Retrofit.Builder()
@@ -18,8 +21,8 @@ object PennerctorClient {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-//    val storageService: StorageService = retrofit.create(StorageService::class.java)
-
+    val loginService: LoginService = retrofit.create(LoginService::class.java)
+    val signUpService:SignUpService = retrofit.create(SignUpService::class.java)
 
 }
 
