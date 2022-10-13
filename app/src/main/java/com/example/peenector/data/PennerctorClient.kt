@@ -7,7 +7,6 @@ import okhttp3.OkHttpClient
 import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.io.IOException
 
 
@@ -22,7 +21,7 @@ object PennerctorClient {
             .build()
 
     val loginService: LoginService = retrofit.create(LoginService::class.java)
-    val signUpService:SignUpService = retrofit.create(SignUpService::class.java)
+    val signUpService: SignUpService = retrofit.create(SignUpService::class.java)
 
 }
 

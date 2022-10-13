@@ -15,8 +15,7 @@ class MypageActivity : AppCompatActivity() {
 
         //이전페이지버튼 클릭이벤트리스너
         iv_mypage_arrow.setOnClickListener{
-            var intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 }
