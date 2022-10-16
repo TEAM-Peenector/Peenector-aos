@@ -50,9 +50,12 @@ class SigninActivity : AppCompatActivity() {
             override fun onResponse(call: Call<ResponseLogin>, response: Response<ResponseLogin>) {
                 if (response.isSuccessful) {
                     val data = response.body()?.data
+                    Log.e("data", "${data?.teamNumber}")
                     Toast.makeText(this@SigninActivity, "로그인에 성공했습니다.", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@SigninActivity, MainActivity::class.java)
+                    intent.putExtra("id", data?.teamNumber)
                     startActivity(intent)
+                    finish()
                 } else {
                     Log.d("loginerror", "onResponse: ")
                 }
