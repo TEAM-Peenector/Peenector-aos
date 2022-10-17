@@ -1,13 +1,14 @@
 package com.example.peenector.data
 
 import com.example.peenector.data.remote.api.LoginService
+import com.example.peenector.data.remote.api.MainTeamService
+import com.example.peenector.data.remote.api.MypageService
 import com.example.peenector.data.remote.api.SignUpService
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.io.IOException
 
 
@@ -22,8 +23,9 @@ object PennerctorClient {
             .build()
 
     val loginService: LoginService = retrofit.create(LoginService::class.java)
-    val signUpService:SignUpService = retrofit.create(SignUpService::class.java)
-
+    val signUpService: SignUpService = retrofit.create(SignUpService::class.java)
+    val mypageService: MypageService = retrofit.create(MypageService::class.java)
+    val mainTeamService: MainTeamService = retrofit.create(MainTeamService::class.java)
 }
 
 private fun provideOkHttpClient(interceptor: AppInterceptor): OkHttpClient =

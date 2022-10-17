@@ -18,12 +18,12 @@ class MissionActivity : AppCompatActivity() {
         btn_mission_mypage.setOnClickListener {
             var intent = Intent(this, MypageActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //엑스버튼 클릭이벤트리스너
         ic_mission_x.setOnClickListener{
-            var intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+           finish()
         }
     }
 }
