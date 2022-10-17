@@ -1,8 +1,10 @@
 package com.example.peenector.presentation.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.example.peenector.MainActivity
 import com.example.peenector.data.PennerctorClient
 import com.example.peenector.data.remote.response.ResponseMypage
 import com.example.peenector.databinding.ActivityMainTeamBinding
@@ -21,10 +23,16 @@ class MainTeamActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         writeInitNetwork(intentId())
+        clickBack()
     }
 
     private fun intentId(): Int {
         return intent.getIntExtra("id", -1)
+    }
+    private fun clickBack(){
+        binding.ivMypageArrow.setOnClickListener {
+            finish()
+        }
     }
 
     private fun writeInitNetwork(id: Int) {

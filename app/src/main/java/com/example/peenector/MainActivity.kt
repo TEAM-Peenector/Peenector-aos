@@ -38,8 +38,9 @@ class MainActivity : AppCompatActivity() {
             //어답터 장착
             adapter = mainRecyclerAdapter
         }
-        clickBtn()
+
         writeInitNetwork(getIntentTeamId())
+        clickBtn(getIntentTeamId())
     }
 
     private fun itemClick(id: Int) {
@@ -59,15 +60,16 @@ class MainActivity : AppCompatActivity() {
 //    }
 
 
-    private fun clickBtn() {
+    private fun clickBtn(id: Int) {
         //마이페이지버튼 클릭이벤트리스너
         btn_main_mypage.setOnClickListener {
-            var intent = Intent(this, MypageActivity::class.java)
+            val intent = Intent(this, MypageActivity::class.java)
+            intent.putExtra("id", id)
             startActivity(intent)
         }
         //미션페이지버튼 클릭이벤트리스너
         btn_main_missionpage.setOnClickListener {
-            var intent = Intent(this, MissionActivity::class.java)
+            val intent = Intent(this, MissionActivity::class.java)
             startActivity(intent)
         }
     }
