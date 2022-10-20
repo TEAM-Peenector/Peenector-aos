@@ -1,7 +1,6 @@
 package com.example.peenector.presentation.main
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -24,18 +23,12 @@ class MainRecyclerAdapter(context: Context, private val itemClick: (Int) -> Unit
     //뷰와 뷰홀더가 묶였을 때
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         holder.bind(this.modelList[position])
-        Log.d("onBind확인", "submitList: $this.modelList")
     }
-
-//    private fun idInt(data:) {
-//
-//    }
 
     //외부에서 데이터 넘기기
     fun submitList(modelList: List<MainModel>) {
         this.modelList = modelList
         notifyDataSetChanged()
-//        Log.d("submitList확인", "submitList: $modelList")
     }
 
     //목록 item 수

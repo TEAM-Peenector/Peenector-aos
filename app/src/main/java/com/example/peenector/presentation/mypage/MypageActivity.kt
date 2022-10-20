@@ -22,7 +22,7 @@ class MypageActivity : AppCompatActivity() {
     }
 
     private fun intentId(): Int {
-        return intent.getIntExtra("id", -1)
+        return intent.getIntExtra("userId", -1)
     }
 
     private fun clickBack() {
@@ -31,8 +31,10 @@ class MypageActivity : AppCompatActivity() {
         }
     }
 
+
     private fun writeInitNetwork(id: Int) {
         val call: Call<ResponseMypage> = PennerctorClient.mypageService.getMypage(id)
+        Log.d("mypageService check Id", "writeInitNetwork: $id")
         call.enqueue(object : Callback<ResponseMypage> {
             override fun onResponse(
                 call: Call<ResponseMypage>,
@@ -42,7 +44,7 @@ class MypageActivity : AppCompatActivity() {
                     Log.d("mypageActivity", "onResponse: ${response.body()}")
                     binding.mydata = response.body()?.data
                 } else {
-                    Log.e("Mypage SuccesNO", "onResponse: ")
+                    Log.e("mypage SuccesNO", "onResponse: ")
                 }
             }
 

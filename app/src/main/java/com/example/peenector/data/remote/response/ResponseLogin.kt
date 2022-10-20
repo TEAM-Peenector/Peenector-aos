@@ -6,6 +6,7 @@ data class ResponseLogin(
     val data: Data
 ) {
     data class Data(
+        val id: Int,
         val schoolNumber: String,
         val teamNumber: Int
     )

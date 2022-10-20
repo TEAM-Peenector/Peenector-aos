@@ -40,19 +40,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         writeInitNetwork(getIntentTeamId())
-        clickBtn(getIntentTeamId())
+        clickBtn(getUserId())
     }
 
     private fun itemClick(id: Int) {
         val intent = Intent(this, MainTeamActivity::class.java)
         intent.putExtra("id", id)
-//        intent.putExtra(id)
         startActivity(intent)
-//        finish()
     }
 
     private fun getIntentTeamId(): Int {
         return intent.getIntExtra("id", -1)
+//        Log.d("getIntentTeamId", "clickBtn: $")
+    }
+
+    private fun getUserId(): Int {
+        return intent.getIntExtra("userId", -1)
     }
 
 //    private fun initID(mainModel: MainModel) {
@@ -64,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         //마이페이지버튼 클릭이벤트리스너
         btn_main_mypage.setOnClickListener {
             val intent = Intent(this, MypageActivity::class.java)
-            intent.putExtra("id", id)
+            intent.putExtra("userId", id)
             startActivity(intent)
         }
         //미션페이지버튼 클릭이벤트리스너
@@ -90,7 +93,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<ResponseMainData>, t: Throwable) {
-                Log.e("mainActivity", "onFailure: ")
+                Log.e("mainActivityOnFail", "onFailure: ")
             }
 
 
