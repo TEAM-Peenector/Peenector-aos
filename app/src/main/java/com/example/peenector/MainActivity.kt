@@ -38,20 +38,24 @@ class MainActivity : AppCompatActivity() {
             //어답터 장착
             adapter = mainRecyclerAdapter
         }
-        clickBtn()
+
         writeInitNetwork(getIntentTeamId())
+        clickBtn(getUserId())
     }
 
     private fun itemClick(id: Int) {
         val intent = Intent(this, MainTeamActivity::class.java)
         intent.putExtra("id", id)
-//        intent.putExtra(id)
         startActivity(intent)
-//        finish()
     }
 
     private fun getIntentTeamId(): Int {
         return intent.getIntExtra("id", -1)
+//        Log.d("getIntentTeamId", "clickBtn: $")
+    }
+
+    private fun getUserId(): Int {
+        return intent.getIntExtra("userId", -1)
     }
 
 //    private fun initID(mainModel: MainModel) {
@@ -59,15 +63,16 @@ class MainActivity : AppCompatActivity() {
 //    }
 
 
-    private fun clickBtn() {
+    private fun clickBtn(id: Int) {
         //마이페이지버튼 클릭이벤트리스너
         btn_main_mypage.setOnClickListener {
-            var intent = Intent(this, MypageActivity::class.java)
+            val intent = Intent(this, MypageActivity::class.java)
+            intent.putExtra("userId", id)
             startActivity(intent)
         }
         //미션페이지버튼 클릭이벤트리스너
         btn_main_missionpage.setOnClickListener {
-            var intent = Intent(this, MissionActivity::class.java)
+            val intent = Intent(this, MissionActivity::class.java)
             startActivity(intent)
         }
     }
@@ -88,7 +93,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<ResponseMainData>, t: Throwable) {
-                Log.e("mainActivity", "onFailure: ")
+                Log.e("mainActivityOnFail", "onFailure: ")
             }
 
 

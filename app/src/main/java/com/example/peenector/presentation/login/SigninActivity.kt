@@ -10,6 +10,7 @@ import com.example.peenector.data.PennerctorClient
 import com.example.peenector.data.remote.request.RequestLogin
 import com.example.peenector.data.remote.response.ResponseLogin
 import com.example.peenector.databinding.ActivitySigninBinding
+import com.example.peenector.presentation.mypage.MypageActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -54,6 +55,12 @@ class SigninActivity : AppCompatActivity() {
                     Toast.makeText(this@SigninActivity, "로그인에 성공했습니다.", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@SigninActivity, MainActivity::class.java)
                     intent.putExtra("id", data?.teamNumber)
+                    //mypage부분
+                    Intent(this@SigninActivity, MypageActivity::class.java).putExtra(
+                        "userId",
+                        data?.id
+                    )
+                    Log.d("signinUserId", "onResponse: ${data?.id}")
                     startActivity(intent)
                     finish()
                 } else {

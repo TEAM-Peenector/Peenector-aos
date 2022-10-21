@@ -21,10 +21,17 @@ class MainTeamActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         writeInitNetwork(intentId())
+        clickBack()
     }
 
     private fun intentId(): Int {
         return intent.getIntExtra("id", -1)
+    }
+
+    private fun clickBack() {
+        binding.ivMypageArrow.setOnClickListener {
+            finish()
+        }
     }
 
     private fun writeInitNetwork(id: Int) {
@@ -35,15 +42,15 @@ class MainTeamActivity : AppCompatActivity() {
                 response: Response<ResponseMypage>
             ) {
                 if (response.isSuccessful) {
-                    Log.d("mypageActivity", "onResponse: ${response.body()}")
+                    Log.d("teamActivity", "onResponse: ${response.body()}")
                     binding.mydata = response.body()?.data
                 } else {
-                    Log.e("Mypage SuccesNO", "onResponse: ")
+                    Log.e("team SuccesNO", "onResponse: ")
                 }
             }
 
             override fun onFailure(call: Call<ResponseMypage>, t: Throwable) {
-                Log.e("mypageActivity", "onFailure: ")
+                Log.e("teamActivity", "onFailure: ")
             }
         })
     }

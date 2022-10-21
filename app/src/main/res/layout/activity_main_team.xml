@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:gravity="center"
-                android:text="@string/mypage_title"
+                android:text='@{ mydata.studentName + "님의 페이지"}'
                 android:textColor="#333738"
                 android:theme="@style/R17"
                 app:layout_constraintTop_toTopOf="parent" />
